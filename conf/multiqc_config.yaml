@@ -9,3 +9,32 @@ swedac_accredited: true
 report_section_order:
     ngi-rnaseq:
         order: -1000
+custom_data:
+    featureCounts_biotype:
+        section_name: 'Biotype Counts'
+        description: >
+            <a href="http://bioinf.wehi.edu.au/featureCounts/" target="_blank">featureCounts_biotype</a>
+            counts mapped reads overlapping genomic features.</p>
+            <p>This plot shows reads overlapping features of different biotypes.
+        plot_type: 'bargraph'
+        pconfig:
+            id: 'featureCounts_biotype_plot',
+            title: 'featureCounts Biotypes',
+            ylab: '# Reads',
+            cpswitch_counts_label: 'Number of Reads'
+    # featureCounts_biotype_genstats:
+    #     plot_type: 'generalstats'
+    #     pconfig:
+    #         - percent_total_rRNA:
+    #             title: '% rRNA',
+    #             description: '% reads overlappying ribosomal RNA features',
+    #             max: 100,
+    #             min: 0,
+    #             suffix: '%',
+    #             scale: 'RdYlGn-rev',
+    #     data:
+    #         sample_a:
+    #             percent_total_rRNA: 1.32
+sp:
+    featureCounts_biotype:
+        fn: '*_biotype_counts.txt'
